@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: Cloud Native CRM RESTfull API
+  liquibase:
+    change-log: classpath:config/liquibase/master.xml
+
+security:
+  allowed-client-address: ${ALLOWED_CLIENT_ADDRESS}
+  jwt:
+    secret: ${JWT_SECRET}
+    token-validity: ${JWT_TOKEN_VALIDITY}
+    token-issuer: ${JWT_TOKEN_ISSUER}

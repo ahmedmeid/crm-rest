@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+    <changeSet id="20220102171530-1" author="ahmedmohamed">
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/app_user.csv" separator=","
+                  tableName="app_user" />
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/security_role.csv" separator=","
+                  tableName="security_role" />
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/user_role.csv" separator=","
+                  tableName="user_role" />
+
+    </changeSet>
+</databaseChangeLog>

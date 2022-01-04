@@ -1,0 +1,13 @@
+---
+applications:
+  - name: crm-rest
+    memory: 1536M
+    path: target/crm-rest-cf.jar
+    env:
+      SPRING_PROFILES_ACTIVE: cloud,postgresql
+      JWT_SECRET: A23M'i1Xxjm1WL@VM0>:hyX!bwnA(<"r&e=FRN]18#S"*qy0BrRY,)*K=Qc[2LZ
+      JWT_TOKEN_VALIDITY: 3600000
+      JWT_TOKEN_ISSUER: cfapps.us10.hana.ondemand.com
+      ALLOWED_CLIENT_ADDRESS: https://crm-react.cfapps.us10.hana.ondemand.com
+    services:
+      - postgres-instance
